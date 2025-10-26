@@ -1,0 +1,44 @@
+.box {
+  position: relative;        
+  width: 97vw;
+  height: 95vh;             
+  margin: 20px auto;
+  background-color: rgba(173, 216, 230, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  overflow: hidden;          
+}
+
+.big-image {
+  position: absolute;
+  top: 50%;                  
+  left: 120px;                
+  transform: translateY(-50%); 
+  width: 35vw; 
+  height: auto;
+  opacity: 0.4;              
+  z-index: 1;                 
+  border-radius: 10px;        
+}
+
+
+h1 {
+  
+  top: 20px;                 
+  left: 320px;                 
+  z-index: 2;                 
+  color:darkblue;
+  font-family: 'Trebuchet MS', sans-serif;
+  margin-top: 20px;
+}
+
+h2 {
+
+  top: 20px;                 
+  left: 320px;                 
+  z-index: 2;                 
+  color: darkblue;
+  font-family: 'Trebuchet MS', sans-serif;
+  margin-top: 20px;
+}
+
