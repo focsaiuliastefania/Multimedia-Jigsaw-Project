@@ -19,7 +19,6 @@
 }
 
 
-
 .boxPieces {
   flex: 0 0 30%; 
   height: 70vh;
@@ -68,6 +67,14 @@
   font-weight: bold;
   transition: 0.3s;
 }
+.btn{
+  background-color: #9370db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
 
 .btn-menu:hover {
   background-color: #7b68ee;
@@ -75,22 +82,66 @@
 }
 
 .puzzle-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 140px);
+  grid-template-rows: repeat(3, 140px);
   gap: 5px;
-  width: 300px; /* container vizibil */
-  margin-top: 10px;
+  justify-content: center;
+  margin-top: 15px;
 }
 
-.puzzle-piece {
-  width: 90px;
-  height: 90px;
-  background-size: cover;
-  background-position: center;
-  cursor: grab;
-  clip-path: polygon(
-    20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%
-  );
-  border: 1px solid #fff;
-}
 
+.piece1 {
+  width: 140px;
+  height: 140px;
+  background-image: url('../images/puzzle1.jpg');
+  background-size: 1329px 879px;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+.piece2 {
+  width: 140px;
+  height: 140px;
+  background-image: url('../images/puzzle2.jpg');
+  background-size: 1329px 879px;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+.piece3 {
+  width: 140px;
+  height: 140px;
+  background-image: url('../images/puzzle3.jpg');
+  background-size: 1329px 879px;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+.piece4 {
+  width: 140px;
+  height: 140px;
+  background-image: url('../images/puzzle4.jpg');
+  background-size: 1329px 879px;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+.piece5 {
+  width: 140px;
+  height: 140px;
+  background-image: url('../images/puzzle5.jpg');
+  background-size: 1329px 879px;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+.piece6 {
+  width: 140px;
+  height: 140px;
+  background-image: url('../images/puzzle6.jpg');
+  background-size: 1329px 879px;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
