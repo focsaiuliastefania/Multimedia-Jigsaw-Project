@@ -2,7 +2,7 @@
   position: relative;        
   width: 97vw;
   height: 95vh;             
-  margin: 20px auto;
+  margin: 20px auto ;
   background-color: rgba(173, 216, 230, 0.7);
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
@@ -10,35 +10,36 @@
 }
 
 .big-image {
-  position: absolute;
-  top: 50%;                  
-  left: 120px;                
-  transform: translateY(-50%); 
-  width: 35vw; 
-  height: auto;
-  opacity: 0.4;              
-  z-index: 1;                 
-  border-radius: 10px;        
+   flex: 0 0 70%; 
+  opacity: 0.6;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-height: 70vh;
+  object-fit: cover;
 }
 
 
-h1 {
-  
-  top: 20px;                 
-  left: 320px;                 
-  z-index: 2;                 
-  color:darkblue;
-  font-family: 'Trebuchet MS', sans-serif;
-  margin-top: 20px;
+
+.boxPieces {
+  flex: 0 0 30%; 
+  height: 70vh;
+  background-color: rgba(151, 126, 218, 0.9);
+  border-radius: 15px;
+  padding: 10px;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.boxPieces h7 {
+  text-align: center;
+  color: white;
 }
 
-h2 {
-
-  top: 20px;                 
-  left: 320px;                 
-  z-index: 2;                 
-  color: darkblue;
-  font-family: 'Trebuchet MS', sans-serif;
-  margin-top: 20px;
+.container {
+  display: flex;         
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 100px;            
+  margin-left: 30px;
+  margin-top: 40px;
 }
-
