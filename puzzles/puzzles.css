@@ -43,3 +43,33 @@
   margin-left: 30px;
   margin-top: 40px;
 }
+
+.menu-box {
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.btn-menu {
+  background-color: #9370db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-left: 100px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-menu:hover {
+  background-color: #7b68ee;
+  transform: scale(1.05);
+}
