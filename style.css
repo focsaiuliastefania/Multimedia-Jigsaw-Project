@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(213, 179, 237); 
+}
+
 .title {
   color: purple;
   text-align: center;
@@ -6,4 +10,7 @@
 .btn{
   background-color: rgb(193, 144, 234);
 
+}
+.card-body{
+  background-color: rgb(161, 113, 195); 
 }
