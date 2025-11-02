@@ -5,43 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puzzle 2</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-        </script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="puzzles.css">
 </head>
 
 <body>
     <div class="box">
         <div class="container">
-            <img src="../images/puzzle2.jpg" alt="Puzzle 2" class="big-image">
-            <div class="boxPieces">
-                <h7>Puzzle Pieces</h7>
-                <div class="puzzle-container">
-                    <div class="piece2" style="background-position: 0 0;"></div>
-                    <div class="piece2" style="background-position: -443px 0;"></div>
-                    <div class="piece2" style="background-position: -886px 0;"></div>
-
-                    <div class="piece2" style="background-position: 0 -293px;"></div>
-                    <div class="piece2" style="background-position: -443px -293px;"></div>
-                    <div class="piece2" style="background-position: -886px -293px;"></div>
-
-                    <div class="piece2" style="background-position: 0 -586px;"></div>
-                    <div class="piece2" style="background-position: -443px -586px;"></div>
-                    <div class="piece2" style="background-position: -886px -586px;"></div>
-                </div>
-            </div>
+            <canvas id="puzzle-canvas" width="800" height="500" data-image="puzzle2.jpg"></canvas>
         </div>
         <div class="menubox">
-            <button class="btn-menu">Start timer</button>
-            <button class="btn-menu">Restart puzzle</button>
-            <button class="btn-menu">
-                <a href="../index.html" class="btn ">Exit puzzle</a></button>
-            </button>
+            <button id="start-btn" class="btn-menu">Start timer</button>
+            <button id="restart-btn" class="btn-menu">Restart puzzle</button>
+            <button id="exit-btn" class="btn-menu">Exit puzzle</button>
+            <div id="timer-display" class="timer-style">00:00</div>
+        </div>
+    </div>
+    <script type="module" src="../js/puzzle.js"></script>
+    <div id="win-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h2>Felicitări!</h2>
+            <p>Ai terminat puzzle-ul!</p>
+            <button id="modal-ok-btn" class="btn-menu">OK</button>
         </div>
     </div>
 </body>
+
 </html>
