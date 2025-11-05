@@ -22,11 +22,7 @@ export function initCanvas(canvasElement, imageUrl) {
     puzzleImage = new Image();
     puzzleImage.src = imageUrl;
 
-    puzzleImage.onerror = () => {
-        console.error("EROARE: Imaginea nu a putut fi încărcată. Verifică calea:", imageUrl);
-        ctx.fillStyle = "red";
-        ctx.fillText("EROARE: Imaginea nu s-a încărcat. Verifică calea din puzzle.js!", 10, 50);
-    };
+  
 
     puzzleImage.onload = () => {
         pieceWidth = puzzleImage.width / PUZZLE_COLS;
