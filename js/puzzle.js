@@ -5,13 +5,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const canvas = document.getElementById('puzzle-canvas');
     const timerElement = document.getElementById('timer-display');
-    const startButton = document.getElementById('start-btn');
+    
     const restartButton = document.getElementById('restart-btn');
     const exitButton = document.getElementById('exit-btn');
     const modal = document.getElementById('win-modal');
     const modalOkButton = document.getElementById('modal-ok-btn');
 
-    if (!canvas || !timerElement || !startButton || !restartButton || !exitButton || !modal || !modalOkButton) {
+    if (!canvas || !timerElement  || !restartButton || !exitButton || !modal || !modalOkButton) {
         console.error("Eroare: Unul sau mai multe elemente HTML nu au fost găsite. Verifică ID-urile!");
         return;
     }
@@ -27,9 +27,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     initCanvas(canvas, imagePath);
 
-    startButton.addEventListener('click', () => {
-        startTimer(timerElement);
-    });
 
     restartButton.addEventListener('click', () => {
         const allPieces = getPieces();
