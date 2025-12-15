@@ -1,4 +1,5 @@
-import { startTimer, stopTimer, restartPuzzle, exitPuzzle } from './gameLogic.js';
+
+import { startTimer, stopTimer, restartPuzzle, exitPuzzle, playWinSound } from './gameLogic.js'; 
 import { initCanvas, drawCanvas, getPieces } from './canvas.js';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -39,6 +40,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     canvas.addEventListener('gameWon', () => {
         stopTimer();
+        playWinSound(); 
+        
         modal.classList.remove('hidden');
     });
 

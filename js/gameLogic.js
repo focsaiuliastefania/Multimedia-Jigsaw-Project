@@ -1,3 +1,6 @@
+
+import { playStartSound, playWinSound } from './audio.js'; 
+
 let timerInterval = null;
 let secondsElapsed = 0;
 
@@ -5,6 +8,8 @@ export function startTimer(timerElement) {
     if (timerInterval) {
         return;
     }
+    
+    playStartSound(); 
 
     secondsElapsed = 0;
 
@@ -27,7 +32,7 @@ export function restartPuzzle(timerElement, pieces, drawCanvasCallback) {
     timerElement.textContent = "00:00";
 
     pieces.forEach(piece => {
-        piece.dx = piece.initialRandomX;
+        piece.dx = piece.initialRandomX; 
         piece.dy = piece.initialRandomY;
         piece.isCorrectlyPlaced = false;
     });
@@ -49,3 +54,5 @@ function formatTime(totalSeconds) {
 
     return `${paddedMinutes}:${paddedSeconds}`;
 }
+
+export { playWinSound } from './audio.js'; 

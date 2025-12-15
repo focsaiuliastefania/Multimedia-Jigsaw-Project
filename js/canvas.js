@@ -1,4 +1,10 @@
+// js/canvas.js
+
 import { startTimer } from "./gameLogic.js";
+// <--- MODIFICARE (START): ADAUGĂ IMPORT AUDIO
+import { playSnapSound } from "./audio.js"; 
+// <--- MODIFICARE (END)
+
 let ctx;
 let puzzleImage;
 let pieces = [];
@@ -121,8 +127,8 @@ function shufflePieces() {
     piece.dx = randomX;
     piece.dy = randomY;
 
-    piece.initialRandomX = randomX;
-    piece.initialRandomY = randomY;
+    piece.initialRandomX = randomX; // Păstrăm poziția inițială
+    piece.initialRandomY = randomY; // Păstrăm poziția inițială
 
     piece.isCorrectlyPlaced = false;
   });
@@ -145,6 +151,14 @@ function drawGrid() {
   }
 
   ctx.stroke();
+}
+
+function getMousePos(e) {
+  const rect = ctx.canvas.getBoundingClientRect();
+  return {
+    x: e.clientX - rect.left,
+    y: e.clientY - rect.top,
+  };
 }
 
 function onMouseDown(e) {
@@ -201,6 +215,8 @@ function onMouseUp(e) {
     selectedPiece.dx = selectedPiece.correctX;
     selectedPiece.dy = selectedPiece.correctY;
     selectedPiece.isCorrectlyPlaced = true;
+    playSnapSound();
+  
   }
 
   selectedPiece = null;
@@ -208,13 +224,6 @@ function onMouseUp(e) {
   checkWinCondition();
 }
 
-function getMousePos(e) {
-  const rect = ctx.canvas.getBoundingClientRect();
-  return {
-    x: e.clientX - rect.left,
-    y: e.clientY - rect.top,
-  };
-}
 
 function checkWinCondition() {
   const allPlaced = pieces.every((piece) => piece.isCorrectlyPlaced);
