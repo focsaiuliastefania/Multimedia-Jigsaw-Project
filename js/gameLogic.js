@@ -1,4 +1,3 @@
-
 import { playStartSound, playWinSound } from './audio.js'; 
 
 let timerInterval = null;

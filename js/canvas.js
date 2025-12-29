@@ -1,9 +1,7 @@
-// js/canvas.js
-
 import { startTimer } from "./gameLogic.js";
-// <--- MODIFICARE (START): ADAUGĂ IMPORT AUDIO
+
 import { playSnapSound } from "./audio.js"; 
-// <--- MODIFICARE (END)
+
 
 let ctx;
 let puzzleImage;
@@ -127,8 +125,8 @@ function shufflePieces() {
     piece.dx = randomX;
     piece.dy = randomY;
 
-    piece.initialRandomX = randomX; // Păstrăm poziția inițială
-    piece.initialRandomY = randomY; // Păstrăm poziția inițială
+    piece.initialRandomX = randomX; 
+    piece.initialRandomY = randomY; 
 
     piece.isCorrectlyPlaced = false;
   });
